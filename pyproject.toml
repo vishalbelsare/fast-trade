@@ -16,6 +16,7 @@ classifiers = [
     "Programming Language :: Python :: 3.10",
     "Programming Language :: Python :: 3.11",
     "Programming Language :: Python :: 3.12",
+    "Programming Language :: Python :: 3.13",
     "Topic :: Scientific/Engineering :: Mathematics",
     "Topic :: Software Development :: Libraries",
     "Intended Audience :: Developers",
@@ -36,9 +37,7 @@ dependencies = [
     "pyarrow>=23.0.0",
     "pyyaml>=6.0.3",
     "rich>=14.3.2",
-    "prompt_toolkit>=3.0.52",
     "typer>=0.23.0",
-    "websockets>=16.0",
     "fastmcp>=2.14.5,<3"
 ]
 
@@ -49,6 +48,9 @@ Repository = "https://github.com/jrmeier/fast-trade"
 [project.scripts]
 ft = "fast_trade.cli:main"
 ftv = "fast_trade.ftv:main"
+
+[project.optional-dependencies]
+dev = ["build", "coverage", "flake8", "pytest"]
 
 [tool.setuptools]
 packages = ["fast_trade", "fast_trade.archive", "fast_trade.summary", "fast_trade.ml"]

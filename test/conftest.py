@@ -1,7 +1,5 @@
-"""Shared fixtures for CLI and terminal tests."""
+"""Shared fixtures for CLI tests."""
 
-import json
-import os
 from pathlib import Path
 
 import pandas as pd
